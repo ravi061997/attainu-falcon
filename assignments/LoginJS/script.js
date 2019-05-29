@@ -6,7 +6,7 @@ document.querySelector("#Login").addEventListener("click",function() {
 });
 function validate(username,password) {
   var user=document.querySelector("#user").value;
-  var user=document.querySelector("#pass").value;
+  var pass=document.querySelector("#pass").value;
   if(user.length<6) {
     alert("Username must contain 6 or more characters");
     return false;
