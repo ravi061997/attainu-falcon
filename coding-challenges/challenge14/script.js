@@ -1,6 +1,11 @@
-const secondsToTime = (seconds, locale) => {
-    const date = new Date(0);
-    date.setHours(0, 0, seconds, 0);
-    return date.toLocaleTimeString(locale);
+function timeFormat(number) {
+  var hr = Math.floor(number/3600);
+  var min = Math.floor((number%3600) / 60);
+  var sec = (number%3600)%60;
+
+  return hr+":"+min+":"+sec;
 }
-console.log(secondsToTime(3700, "en"));
+console.log(timeFormat(126));
+console.log(timeFormat(45));
+console.log(timeFormat(3700));
+
