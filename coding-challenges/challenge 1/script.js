@@ -15,7 +15,7 @@ function checkTopTen(playerList) {
   var i ,n;
   n=playerList.length;
   for( i=0; i<n; i++) {
-    if(playerList[1].rank<=10) {
+    if(playerList[i].rank<=10) {
       console.log(playerList[i].name + "" +playerList[i].rank);
     }
   }
