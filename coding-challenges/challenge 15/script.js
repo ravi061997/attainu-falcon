@@ -1,22 +1,17 @@
+function nextLetter(string) {
+  var i, nextString="";
 
-function LetterChanges(str) {
-  
-  str = str.trim().toLowerCase();
-  var len = str.length;
-  var newStr = '';
-  
-  for (var i = 0; i < len; i++) {
-    if (/[a-ce-gi-mo-su-y]/.test(str[i])) {
-      newStr += String.fromCharCode(((str[i].charCodeAt(0) - 18) % 26) + 97)    
-    }
-    else if (/[zdhnt]/.test(str[i])) {
-        newStr += String.fromCharCode(((str[i].charCodeAt(0) - 18) % 26) + 65);
-    }
-    else {
-     newStr += str[i]; 
-    }
+  for(i=0; i<string.length; i++) {
+    var code = string.charCodeAt(i);
+    if(code==90)
+       code==65;
+       else if(code == 122)
+       code=97;
+       else
+    code = code+1;
+    nextString = nextString+String.fromCharCode(code);
   }
-  return newStr; 
-         
+  return nextString;
 }
-LetterChanges(str);
+console.log(nextLetter("hello"));
+console.log(nextLetter("zeta"));
