@@ -8,7 +8,7 @@ function starPattern(n) {
     }
     console.log(string);
   }
-  for(i=n-1; i>=1; i=i--) {
+  for(i=n-1; i>=1; i--) {
     var string ="";
     for(j=1;j<=i;j++) {
       string = string + "*";
