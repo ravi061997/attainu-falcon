@@ -3,7 +3,7 @@
 function checkAnagram(string1, string2) {
   if(string1.length == string2.length) {
     var i,j, a = [];
-    for(i=0; i<string.length; i++) {
+    for(i=0; i<string1.length; i++) {
       a.push(string1.charAt(1));
     }
 
