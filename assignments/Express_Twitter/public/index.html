@@ -33,17 +33,17 @@
                      url:'/getTweets',
                      method:'get',
                      dataType:'json',
-                     success: function(twitters) {
+                     success: function(twitts) {
                          $('body').append('<ul></ul>');
                          for(var i=0;i<data.length; i++) {
-                            var twittersdiv = "";
-                            twittersdiv +=  '<div class="card border-success rounded">' ;
-                            twittersdiv +=   '<div class="card-header"><h4> #tweet' +(i+1)+ '</h4></div>';
-                            twittersdiv +=   '<div class="card-body ">';
-                            twittersdiv +=   '<p class="card-text">' + data[i].twitters + '</p>';
-                            twittersdiv +=   '<footer class="blockquate-footer">' +data[i].name + '</footer>';
-                            twittersdiv +=   '<div></div>';
-                            $('#twitters').append(twittersdiv);
+                            var twittsdiv = "";
+                            twittsdiv +=  '<div class="card border-success rounded">' ;
+                            twittsdiv +=   '<div class="card-header"><h4> #tweet' +(i+1)+ '</h4></div>';
+                            twittsdiv +=   '<div class="card-body ">';
+                            twittsdiv +=   '<p class="card-text">' + data[i].twitts + '</p>';
+                            twittsdiv +=   '<footer class="blockquate-footer">' +data[i].name + '</footer>';
+                            twittsdiv +=   '<div></div>';
+                            $('#twitters').append(twittsdiv);
                          }
                      }
                  })
