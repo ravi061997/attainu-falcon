@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <title> Twitter Page</title>
+            <!-- Bootstrap core CSS -->
+           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    </head>
+
+ <body class="text-center" >
+        <div class = "container">
+                <form class="form-signin" action="/" mthods="POST" >
+              <!-- <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+              <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+              <label for="inputName" class="sr-only">Email address</label>
+              <input type="text" id ="inputName"class="form-control" name="name" placeholder="Enter name" required="" autofocus="" >
+              <label for="inputTweet" class="sr-only">Password</label>
+              <textarea  id="inputTweet" class="form-control" name = "tweet" placeholder="Enter Tweet" required></textarea>>
+               <input class ="btn btn-lg  btn-primary  btn-block" typr="Submit" />
+               <p class="mt-5 mb-3 text muted">&copy; 2017-19</p>
+            </form>
+            </div>
+        
+              <script
+              src="https://code.jquery.com/jquery-3.4.1.min.js"
+              integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+              crossorigin="anonymous"></script>
+             
+        
+             <script>
+                 $.ajax({
+                     url:'/getTweets',
+                     method:'get',
+                     dataType:'json',
+                     success: function(twitters) {
+                         $('body').append('<ul></ul>');
+                         for(var i=0;i<data.length; i++) {
+                            var twittersdiv = "";
+                            twittersdiv +=  '<div class="card border-success rounded">' ;
+                            twittersdiv +=   '<div class="card-header"><h4> #tweet' +(i+1)+ '</h4></div>';
+                            twittersdiv +=   '<div class="card-body ">';
+                            twittersdiv +=   '<p class="card-text">' + data[i].twitters + '</p>';
+                            twittersdiv +=   '<footer class="blockquate-footer">' +data[i].name + '</footer>';
+                            twittersdiv +=   '<div></div>';
+                            $('#twitters').append(twittersdiv);
+                         }
+                     }
+                 })
+             </script>
+ </body>
+</html> 
