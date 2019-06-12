@@ -2,29 +2,19 @@ var fibonacci_series = function (n)
 {
   if (n==1) 
   {
-    return [1,1];
+    return [1];
   } 
-  else 
+  else if(n==2)
   {
-    var s = fibonacci_series(n - 1);
-    s.push(s[s.length - 1] + s[s.length - 2]);
-    return s;
-  }
-
-  if(n==2) {
-    return[1,2];
+    
+    return [1,1];
   }
   else {
-     var s = fibonacci_series(n - 2);
-    s.push(s[s.length - 2] + s[s.length - 3]);
-    return s;
+     var arr = fibonacci_series(n-1);
+    arr.push(arr[n-2]+arr[n-3]);
+    return arr;
   }
 
-};
+}
 
  console.log(fibonacci_series(10));
- 
-
-
- 
- 
