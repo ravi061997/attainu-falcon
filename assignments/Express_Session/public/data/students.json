@@ -1,0 +1,42 @@
+[
+    {
+        "id": "01",
+        "name" : "ravi",
+        "gender":"male",
+        "email": "ravi@gmail.com",
+        "password":"ravi"
+    },
+    
+    {
+        "id": "02",
+        "name" : "rj",
+        "gender":"male",
+        "email": "rj@gmail.com",
+        "password":"rj1"
+    },
+
+    
+    {
+        "id": "03",
+        "name" : "veer",
+        "gender":"male",
+        "email": "veer@gmail.com",
+        "password":"veer"
+    },
+    
+    {
+        "id": "04",
+        "name" : "suraj",
+        "gender":"male",
+        "email": "suraj@gmail.com",
+        "password":"suraj"
+    },
+    
+    {
+        "id": "05",
+        "name" : "sweety",
+        "gender":"female",
+        "email": "sweeety@gmail.com",
+        "password":"swweety"
+    }
+]
