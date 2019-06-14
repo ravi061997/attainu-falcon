@@ -1,121 +1,42 @@
-// <<<<<<< HEAD
-// var express = require("express");
-// var app = express();
-// var PORT = 8080;
+var express = require('express');
+var bodyParser = require('body-parser');
+var app = express();
+var port = 3000;
+app.use(bodyParser.json());
 
-// app.get('/:operator/:num1/:num2', function(req,res){
-	
-// 	var operator = req.params.operator
-// 	var num1 = parseInt(req.params.num1);
-// 	var num2 = parseInt(req.params.num2);
-// 	var result;
+app.get('/add' ,function (req,res){
+    console.log(req.body.num1);
+    res.json ({
+        "num1":req.body.num1,
+        "num2":req.body.num2,
+        "result": parseFloat(req.body.num1)+parseFloat(req.body.num2)
+    });
+})
+app.get('/sub' ,function (req,res){
+    console.log(req.body.num1);
+    res.json ({
+        "num1":req.body.num1,
+        "num2":req.body.num2,
+        "result": parseFloat(req.body.num1)-parseFloat(req.body.num2)
+    });
+})
 
-// 	switch(operator){
-// 		case "addition":
-// 		result = add(num1, num2);
-// 		break;
+app.get('/mutiply' ,function (req,res){
+    console.log(req.body.num1);
+    res.json ({
+        "num1":req.body.num1,
+        "num2":req.body.num2,
+        "result": parseFloat(req.body.num1)*parseFloat(req.body.num2)
+    });
+})
 
-// 		case "subtraction":
-// 		result = subtract(num1, num2);
-// 		break;
+app.get('/div' ,function (req,res){
+    console.log(req.body.num1);
+    res.json ({
+        "num1":req.body.num1,
+        "num2":req.body.num2,
+        "result": parseFloat(req.body.num1)/parseFloat(req.body.num2)
+    });
+})
 
-// 		case "multiplication":
-// 		result = multiply(num1, num2);
-// 		break;
-
-// 		case "division":
-// 		result = divide(num1, num2);
-// 		break;
-
-// 		default:
-// 		result = "Sorry, please enter a valid operator!"
-// 	}
-
-// 	function add(a, b){
-// 		return a + b
-// 	}
-
-// 	function subtract(a, b){
-// 		return a - b
-// 	}
-
-// 	function multiply(a, b){
-// 		return a * b
-// 	}
-
-// 	function divide(a, b){
-// 		return a / b
-// 	}
-
-// 	res.json(result);
-// });
-
-// app.get("/", function(req, res){
-// 	res.send("hello! please type some math y'all")
-// });
-
-// //listener
-// app.listen(PORT, function(){
-// 	console.log("App listening on PORT:" + PORT);
-// });
-// =======
-// var express = require("express");
-// var app = express();
-// var PORT = 8080;
-
-// app.get('/:operator/:num1/:num2', function(req,res){
-	
-// 	var operator = req.params.operator
-// 	var num1 = parseInt(req.params.num1);
-// 	var num2 = parseInt(req.params.num2);
-// 	var result;
-
-// 	switch(operator){
-// 		case "addition":
-// 		result = add(num1, num2);
-// 		break;
-
-// 		case "subtraction":
-// 		result = subtract(num1, num2);
-// 		break;
-
-// 		case "multiplication":
-// 		result = multiply(num1, num2);
-// 		break;
-
-// 		case "division":
-// 		result = divide(num1, num2);
-// 		break;
-
-// 		default:
-// 		result = "Sorry, please enter a valid operator!"
-// 	}
-
-// 	function add(a, b){
-// 		return a + b
-// 	}
-
-// 	function subtract(a, b){
-// 		return a - b
-// 	}
-
-// 	function multiply(a, b){
-// 		return a * b
-// 	}
-
-// 	function divide(a, b){
-// 		return a / b
-// 	}
-
-// 	res.json(result);
-// });
-
-// app.get("/", function(req, res){
-// 	res.send("hello! please type some math y'all")
-// });
-
-// //listener
-// app.listen(PORT, function(){
-// 	console.log("App listening on PORT:" + PORT);
-// });
-// >>>>>>> 30f64f920358472acb51c9875556b0be0ae0a27a
+app.listen(port);
