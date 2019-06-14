@@ -30,13 +30,6 @@ app.get('/mutiply' ,function (req,res){
     });
 })
 
-app.get('/div' ,function (req,res){
-    console.log(req.body.num1);
-    res.json ({
-        "num1":req.body.num1,
-        "num2":req.body.num2,
-        "result": parseFloat(req.body.num1)/parseFloat(req.body.num2)
-    });
-})
+
 
 app.listen(port);
