@@ -1,0 +1,19 @@
+{
+  "name": "attainu-falcon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravi061997/attainu-falcon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravi061997/attainu-falcon/issues"
+  },
+  "homepage": "https://github.com/ravi061997/attainu-falcon#readme"
+}
