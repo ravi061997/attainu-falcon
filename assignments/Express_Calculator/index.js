@@ -1,35 +1,49 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+
 var app = express();
-var port = 3000;
+
 app.use(bodyParser.json());
 
-app.get('/add' ,function (req,res){
-    console.log(req.body.num1);
-    res.json ({
-        "num1":req.body.num1,
-        "num2":req.body.num2,
-        "result": parseFloat(req.body.num1)+parseFloat(req.body.num2)
-    });
-})
-app.get('/sub' ,function (req,res){
-    console.log(req.body.num1);
-    res.json ({
-        "num1":req.body.num1,
-        "num2":req.body.num2,
-        "result": parseFloat(req.body.num1)-parseFloat(req.body.num2)
+app.get('/add/:a/:b' , function(req,res){
+    console.log(req.params.a)
+    var a = parseInt(req.params.a);
+    var b = parseInt(req.params.b);
+    res.json({
+        "a":a,
+        "b":b, 
+        "result":(a+b)
     });
 })
 
-app.get('/mutiply' ,function (req,res){
-    console.log(req.body.num1);
-    res.json ({
-        "num1":req.body.num1,
-        "num2":req.body.num2,
-        "result": parseFloat(req.body.num1)*parseFloat(req.body.num2)
-    });
+app.get('/subract/:a/:b' , function(req,res){
+    console.log(req.params.a);
+    var a = parseInt(req.params.a);
+    var b = parseInt(req.params.b);
+    res.json({
+        "a":a,
+        "b":b, 
+        "result":(a-b)});
 })
 
+app.get('/multiply/:a/:b' , function(req,res){
+    console.log(req.params.a);
+    var a = parseInt(req.params.a);
+    var b = parseInt(req.params.b);
+    res.json({
+        "a":a,
+        "b":b, 
+        "result":(a*b)});
+})
 
+app.get('/div/:a/:b' , function(req,res){
+    console.log(req.params.a);
+    var a = parseInt(req.params.a);
+    var b= parseInt(req.params.b);
+    res.json({
+        "a":a,
+        "b":b, 
+        "result":(a-b)});
+})
 
-app.listen(port);
+app.listen(3000);

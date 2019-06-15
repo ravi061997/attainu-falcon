@@ -1,13 +1,13 @@
-var express = require('express');
+  var express = require('express');
 var bodyParser = require('body-parser');
-var session = require('express-session');
+var session = require('express-session'); 
 var db = require('.data/students.json');
 
-var app = express();
+var app = express();  
 var port = 3000;
 
 app.use(session({
-    secret:"Express Session Secret"
+    secret:"Express Session Secret"    
 }));
 app.use(bodyParser.urlencoded());
 
