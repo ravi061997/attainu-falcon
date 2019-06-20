@@ -1,6 +1,9 @@
 Ravendra Prajapati
 
 Resume
-Assignmenta
+
+Assignments
+
 Coding Challenge
+
 Github Page
