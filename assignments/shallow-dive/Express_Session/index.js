@@ -1,13 +1,21 @@
-var express = require('express');
+  var express = require('express');
 var bodyParser = require('body-parser');
+<<<<<<< HEAD:assignments/shallow-dive/Express_Session/index.js
 var session = require('express-session');
 var db = require('./data/students.json');
 
 var app = express();
 var port = 8080;
+=======
+var session = require('express-session'); 
+var db = require('.data/students.json');
+
+var app = express();  
+var port = 3000;
+>>>>>>> eedf794ac3f9a99646fd8fba18895e6e42964959:assignments/Express_Session/index.js
 
 app.use(session({
-    secret:"Express Session Secret"
+    secret:"Express Session Secret"    
 }));
 app.use(bodyParser.urlencoded());
 

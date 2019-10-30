@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+     <meta charset="utf-8">
+     <title>express_attainu</title>
+      <!-- Bootstrap core CSS -->
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+  <body >
+        <div class="card w-76,H-76, ">
+                <div class="card-body">
+                  <h5 class="card-title">Instructors Information</h5>
+                  <p class="card-text">{"name": "Anand Kumar",
+                        "email": "anand@gmail.com",
+                        "phone": "8889519808",
+                        "age": "30"},</br>{"name": "Deepika Singh",
+                        "email": "deepika@gmail.com",
+                        "phone": "8889515648",
+                        "age": "28"},</br>{ "name": "Rahul Singh",
+                        "email": "rahul@gmail.com",
+                        "phone": "8889517688",
+                        "age": "26"},</br>{"name": "Satish Kumar",
+                        "email": "satish@gmail.com",
+                        "phone": "7756787649",
+                        "age": "24"}</p>
+                </div>
+              </div>
+              
+              <div class="card w-76 , H-76" >
+                <div class="card-body">
+                  <h5 class="card-title">Students Information</h5>
+                  <p class="card-text">{"name": "rahul",
+                        "email": "rahul@gmail.com",
+                        "phone": "7756897649",
+                        "age": "21"},</br>{"name": "raj ",
+                        "email": "raj@gmail.com",
+                        "phone": "8847515315",
+                        "age": "21"},</br>{ "name": "ravi ",
+                        "email": "ravendraprajapati1997@gmail.com",
+                        "phone": "7355309443",
+                        "age": "21"},</br>{"name": "sweety",
+                        "email": "sweety@gmail.com",
+                        "phone": "8847515648",
+                        "age": "21"}</p>
+                  <button class="btn btn-primary">Edit</button>
+                  <button class="btn btn-primary">Save</button>
+                  <button class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+       <script>
+            $.ajax({
+            url:'/students',
+            method:'get',
+            dataType:'json',
+            success: function(data) {
+            $('.container').prepend('<div id="students"></div>');
+            for(var i=0; i<data.length; i++) {
+
+            var studentsdiv = "";
+            studentsdiv += '<div class="card border border-success rounded my-3">';
+            studentsdiv+= '<div class="card-header"><h4> students information'+ (i+1) +'</h4></div>';
+            studentsdiv += '<div class="card-body">';
+            studentsdiv += '<p class="card-text">'+ data[i].students + '</p>';
+            studentsdiv += '<footer class="blackquote-footer">'+ data[i].students+'</footer>';
+            studentsdiv += '<div></div>';    
+
+            $('students').append(studentsdiv);
+                  //$('ul').append('<li>' + data[i].students + ':' + data[i].students +'</li>');
+            }
+          }
+        })
+        </script>
+    </body>
+</html>
