@@ -1,0 +1,42 @@
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+header{
+    flex-basis: 20%;
+    background: yellowgreen;
+    color:grey;
+    font-size:24px;
+}
+footer{
+    flex-basis:20%;
+    background:yellowgreen;
+    color:grey;
+    font-size:24px;
+}
+main{
+    flex-grow:1;
+    display:flex;
+    flex-direction:row;
+}
+nav{
+    flex-basis:20%;
+    background:lightyellow;
+    color:grey;
+    font-size:24px;
+}
+article{
+    flex-basis:20%;
+    flex-grow:1;
+    background:white;
+    color:grey;
+    font-size:24px;
+}
+aside{
+    flex-basis:20%;
+    background:lightyellow;
+    color:grey;
+    font-size:24px;
+}
