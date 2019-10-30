@@ -13,17 +13,18 @@ var tweets = [
         tweet: "@digitizer I agree."
     }
 ];
-app.use(bodyParser.urlencoded());
 
-app.use(express.static('/public'));
-app.get('/getTweets' , function(req , res) {
+app.use(bodyParser.urlencoded());
+app.use(express.static('public'));
+
+app.get('/getTweets', function(req,res){
     res.json(tweets);
 });
 
-app.post('/' , function(req,res){
-    console.log(req.body); 
+app.post('/',function(req,res){
+    console.log(req.body);
     tweets.push(req.body);
     res.redirect('/')
-})
+});
 
 app.listen(3000);

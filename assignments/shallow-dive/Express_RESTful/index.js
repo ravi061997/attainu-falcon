@@ -3,8 +3,6 @@ var bodyParser = express('body-parser');
 
 var app = express();
 
-app.use(bodyParser.json());
-
 app.post('/add', function(req, res){
    console.log(req.body.num1);
    res.json({
