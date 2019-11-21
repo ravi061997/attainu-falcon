@@ -1,20 +1,24 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+    height: 100vh;
+display: flex;
+flex-direction: column;
+background: black;
+margin: 0;
+}
+.header{
+    flex-basis: 20%;
+    color: pink;
+    background: white;
+}
+main{
+flex-grow: 1;
+display: flex;
+flex-direction: row;
+}
+.user{
+    flex-basis: 80%;
+}
+.repo{
+    flex-basis: 50%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-#logo {
-  height: 40px;
-  width: 60px;
-  margin-top: 10px;
-  margin-left: 10px;
-}

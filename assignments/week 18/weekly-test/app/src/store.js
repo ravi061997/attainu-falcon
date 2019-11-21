@@ -1,9 +1,11 @@
-import { createStore } from "redux";
-import mailReducer from "./reducers/mailReducer";
+import { createStore } from 'redux';
+import RepoReducer from './reducers/Reducer';
 
-const store = createStore(
-  mailReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+function configureStore() {
+    return createStore(
+        RepoReducer,
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    );
+}
 
-export default store;
+export default configureStore;
